@@ -1,0 +1,209 @@
+/* סגנונות כלליים */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header a {
+    color: white;
+    text-decoration: none;
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav input {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+#advanced-filters {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#advanced-filters label {
+    margin: 0 5px;
+}
+
+#advanced-filters input,
+#advanced-filters select {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+#categories-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.category-card {
+    border: 1px solid #ccc;
+    border-radius: 90%;
+    margin: 0 10px;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-card:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100px;
+    height: auto;
+}
+
+#product-images img {
+    width: 150px;
+    height: auto;
+}
+
+#cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    width: 200px;
+}
+
+.product-card img {
+    width: 100px;
+    height: auto;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+.quantity-control button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.quantity-control span {
+    margin: 0 10px;
+}
+
+footer {
+    padding-top: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#categories {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+.category-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 55px 0;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    /* מרווח מלמעלה */
+}
+
+#cart-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('https://icons.iconarchive.com/icons/fasticon/shop-cart/128/shop-cart-icon.png') no-repeat center;
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.category-card img {
+    width: 50px;
+    /* גודל התמונה קטן יותר */
+    height: 50px;
+}
