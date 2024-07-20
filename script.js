@@ -18,8 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'home-decoration': 'https://www.iconninja.com/files/37/794/498/lamp-icon.png',
         'kitchen-accessories': 'https://icons.iconarchive.com/icons/julie-henriksen/kitchen/128/Cutlery-Spoon-Fork-Knife-icon.png',
         'laptops': 'https://icons.iconarchive.com/icons/media-design/hydropro-v2/128/Laptop-icon.png',
-        'mens-shirts': 'https://icons.iconarchive.com/icons/michael/nike/256/Nike-Shirt-16-icon.png',
+        'mens-shirts': 'https://www.iconninja.com/files/7/835/620/shirt-icon.png',
         'mens-shoes': 'https://icons.iconarchive.com/icons/mattrich/adidas/128/Adidas-Shoe-icon.png',
+        'tops': 'https://icons.iconarchive.com/icons/google/noto-emoji-people-clothing-objects/128/12183-dress-icon.png',
         'mobile-accessories': 'https://icons.iconarchive.com/icons/iconshock/dj/128/headset-icon.png',
         'motorcycle': 'https://www.iconninja.com/files/104/763/828/motorcycle-icon.png',
         'skin-care': 'https://icons.iconarchive.com/icons/robinweatherall/cleaning/128/bottles-icon.png',
@@ -27,7 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         'sports-accessories': 'https://icons.iconarchive.com/icons/kevin-andersson/sportset/128/Soccer-icon.png',
         'sunglasses': 'https://icons.iconarchive.com/icons/proycontec/beach/128/sunglasses-icon.png',
         'tablets': 'https://www.iconninja.com/files/296/413/283/tablet-icon.png',
-        'tops': 'https://icons.iconarchive.com/icons/google/noto-emoji-people-clothing-objects/128/12183-dress-icon.png',
+        'mens-watches': 'https://icons.iconarchive.com/icons/r34n1m4ted/chanel/128/WATCH-icon.png',
+        'vehicle': 'https://icons.iconarchive.com/icons/cemagraphics/classic-cars/128/vw-beetle-icon.png',
+        'womens-bags': 'https://www.iconninja.com/files/156/35/796/bag-icon.png',
+        'womens-jewellery': 'https://www.iconninja.com/files/543/11/732/necklace-icon.png',
+        'womens-dresses': 'https://www.iconninja.com/files/203/690/423/dress-icon.png',
+        'womens-shoes': 'https://icons.iconarchive.com/icons/google/noto-emoji-people-clothing-objects/128/12197-high-heeled-shoe-icon.png',
+        'womens-watches': 'https://www.iconninja.com/files/908/745/303/chopard-watch-icon.png'
+
 
 
 
@@ -50,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Check if the category has a corresponding image
                     if (categoryImages[category]) {
                         categoryCard.innerHTML = `
-                            <img src="${categoryImages[category]}"  class="category-image">
+                            <img src="${categoryImages[category]}"  class="category-image"><ar\>
+                            
                             <p>${category}</p>
                         `;
                     } else {

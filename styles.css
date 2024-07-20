@@ -4,25 +4,55 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-
+header {
+    background-color: #e1f0f5;
+    color: #e1f0f5;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    height: 150px;
+    justify-content: space-between;
+}
 
 header a {
-    color: white;
+    color: #e1f0f5;
     text-decoration: none;
-
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#cart-button {
+    background: url('https://icons.iconarchive.com/icons/fasticon/shop-cart/128/shop-cart-icon.png') no-repeat center;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    color: #01e1f5;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    font-family: 'Bookman';
 }
 
-nav input {
-    margin: 0 10px;
-    padding: 5px;
+.header-logo {
+    width: 150px;
+    margin-right: auto;
+}
+
+#home-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: #FD3C73;
+    font-size: 50px;
+    font-family: 'Impact';
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000;
+    letter-spacing: 0.03em;
 }
 
 main {
@@ -34,16 +64,26 @@ main {
 }
 
 #advanced-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 20px;
-    text-align: center;
+    background-color: #e1f0f5;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-#advanced-filters label {
-    margin: 0 5px;
+#advanced-filters nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-#advanced-filters input,
-#advanced-filters select {
+#advanced-filters nav input,
+#advanced-filters nav select,
+#advanced-filters nav button {
     margin: 0 5px;
     padding: 5px;
 }
@@ -54,26 +94,28 @@ main {
     white-space: nowrap;
     width: 100%;
     padding: 10px 0;
-    background-color: #f5f5f5;
+    background-color: #e1f0f5;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-.category-card {
-    border: 1px solid #ccc;
-    border-radius: 90%;
-    margin: 0 10px;
-    padding: 20px;
+#categories-container div {
     display: inline-block;
-    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
     background-color: #fff;
+    border: 1px solid #ccc;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    flex-shrink: 0;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.product {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
 }
 
 .category-card:hover {
@@ -133,8 +175,7 @@ main {
     margin: 10px 0;
 }
 
-
-.quantity-control button {
+quantity-control button {
     background-color: #333;
     color: white;
     border: none;
@@ -143,7 +184,7 @@ main {
     margin: 0 5px;
 }
 
-.quantity-control span {
+quantity-control span {
     margin: 0 10px;
 }
 
@@ -167,43 +208,38 @@ footer {
 
 .category-card {
     border: 1px solid #ccc;
-    margin: 10px;
+    border-radius: 50%;
+    margin: 0 10px;
     padding: 20px;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    display: inline-block;
+    flex-shrink: 0;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f5f5f5;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-radius: 50%;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 55px 0;
-    text-align: center;
-    position: relative;
-    margin-top: 20px;
-    /* מרווח מלמעלה */
-}
+@media (max-width: 600px) {
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-#cart-button {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: url('https://icons.iconarchive.com/icons/fasticon/shop-cart/128/shop-cart-icon.png') no-repeat center;
-    width: 64px;
-    height: 64px;
-    background-size: contain;
-    border: none;
-    cursor: pointer;
+    input[type="number"],
+    select {
+        width: 100%;
+    }
+
+    #categories-container {
+        flex-direction: column;
+    }
 }
 
 .category-card img {
-    width: 50px;
+    width: 110px;
     /* גודל התמונה קטן יותר */
-    height: 50px;
+    height: 110px;
 }

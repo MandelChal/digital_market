@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const cartItemsDiv = document.getElementById('cart-items');
     const checkoutButton = document.getElementById('checkout');
@@ -120,3 +123,9 @@ function addToCart(product) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${product.title} נוסף לסל הקניות!`);
 }
+
+
+
+
+
+
