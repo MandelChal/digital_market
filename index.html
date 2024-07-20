@@ -19,22 +19,26 @@
     <main>
         <div id="advanced-filters">
             <nav>
-                <input type="text" id="search-input" placeholder="חיפוש מוצרים...">
-                <button id="search-button">search...</button>
-                <label for="min-price">Min:</label>
-                <input type="number" id="min-price" placeholder="min" min="0">
-                <label for="max-price">Max:</label>
-                <input type="number" id="max-price" placeholder="max" min="0">
-                <label for="rating">דירוג:</label>
-                <select id="rating">
-                    <option value="">בחר דירוג</option>
-                    <option value="1">1 כוכבים ומעלה</option>
-                    <option value="2">2 כוכבים ומעלה</option>
-                    <option value="3">3 כוכבים ומעלה</option>
-                    <option value="4">4 כוכבים ומעלה</option>
-                    <option value="5">5 כוכבים</option>
-                </select>
-                <button id="filter-button">סנן</button>
+                <div> <input type="text" id="search-input" placeholder="Search for a product...">
+                    <button id="search-button">search...</button>
+                </div>
+                <div>
+                    <input id="search-input">
+                    <label for="min-price">Min:</label>
+                    <input type="number" id="min-price" placeholder="min" min="0">
+                    <label for="max-price">Max:</label>
+                    <input type="number" id="max-price" placeholder="max" min="0">
+                    <label for="rating">Product rating:</label>
+                    <select id="rating">
+                        <option value="">Select a rating</option>
+                        <option value="1">1 stars and above</option>
+                        <option value="2">2 stars and above</option>
+                        <option value="3">3 stars and above</option>
+                        <option value="4">4 stars and above</option>
+                        <option value="5">5 stars</option>
+                    </select>
+                    <button id="filter-button">filter</button>
+                </div>
             </nav>
         </div>
         <div id="categories-container">
