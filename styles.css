@@ -83,24 +83,28 @@ main {
     flex-wrap: wrap;
 }
 
-#search-bar-container input[type="text"] {
-    width: 90%;
-    /* שנה לערך הרצוי */
-    padding: 10px;
+#search-input {
+    width: 38%;
+    padding: 12px;
+    /* עדכן את הערכים אם נדרש */
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-#search-bar-container button {
-    padding: 50px 20px;
+/* 
+#search-button {
+    padding: 5px 3px;
+
     background-color: #FD3C73;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    padding: 10px 20px;
     font-size: 16px;
-}
+} */
+
 
 #advanced-filters nav {
     display: flex;
@@ -111,31 +115,94 @@ main {
     justify-content: center;
 }
 
-#advanced-filters nav input,
-#advanced-filters nav select,
-#advanced-filters nav button {
-    flex: 1 1 calc(33.333% - 20px);
-    margin: 5px;
-    padding: 10px;
-    min-width: 120px;
-}
-
-#advanced-filters nav button {
+#search-button {
+    width: auto;
+    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    padding: 10px 15px;
+    /* שנה את הערכים לפי הרצון */
     background-color: #FD3C73;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    font-size: 18px;
+    /* שנה את הערך לפי הרצון */
+
+
 }
+
+#filter-button {
+    width: auto;
+    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    padding: 10px 15px;
+    /* שנה את הערכים לפי הרצון */
+    background-color: #FD3C73;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    /* שנה את הערך לפי הרצון */
+
+}
+
+#rating {
+    width: 25%;
+    ;
+    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    padding: 10px 25px;
+    /* שנה את הערכים לפי הרצון */
+    background-color: #f9f9f9;
+    color: rgb(4, 0, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    /* שנה את הערך לפי הרצון */
+
+
+}
+
+#min-price {
+    width: 10%;
+    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    padding: 10px 15px;
+    /* שנה את הערכים לפי הרצון */
+    background-color: #f9f9f9;
+    color: rgb(4, 0, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    /* שנה את הערך לפי הרצון */
+
+
+}
+
+#max-price {
+    width: 10%;
+    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    padding: 10px 15px;
+    margin-right: 20px;
+    /* שנה את הערכים לפי הרצון */
+    background-color: #f9f9f9;
+    color: rgb(4, 0, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    /* שנה את הערך לפי הרצון */
+
+}
+
+
 
 #categories-container {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
     width: 100%;
-    padding: 10px 0;
+    padding: 0px 0;
     background-color: #e1f0f5;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -143,7 +210,7 @@ main {
 
 #categories-container div {
     display: inline-block;
-    padding: 10px;
+    padding: 20px;
     margin-right: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -162,7 +229,7 @@ main {
 
 .category-card:hover {
     background-color: #e0e0e0;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 #content {
@@ -218,7 +285,7 @@ main {
 }
 
 quantity-control button {
-    background-color: #333;
+    background-color: #faf8f8;
     color: white;
     border: none;
     padding: 5px 20px;
@@ -284,6 +351,14 @@ footer {
     display: block;
 }
 
+#home-link:hover {
+    font-size: 60px;
+    /* שנה את הערך לגודל הפונט הרצוי */
+    transition: font-size 0.3s ease;
+    /* הוספת מעבר חלק */
+}
+
+
 /* שאילתות מדיה להתאמה למכשירים קטנים יותר */
 @media (max-width: 600px) {
     #search-bar-container {
@@ -291,12 +366,12 @@ footer {
     }
 
     #search-bar-container input[type="text"] {
-        width: 100%;
+        width: 50%;
         margin-bottom: 10px;
     }
 
     #search-bar-container button {
-        width: 100%;
+        width: 10%;
         padding: 10px;
     }
 
@@ -308,11 +383,12 @@ footer {
     #advanced-filters nav input,
     #advanced-filters nav select,
     #advanced-filters nav button {
-        width: 100%;
-        margin: 5px 0;
+        width: 70%;
+        margin: 8px 0;
         padding: 10px;
         font-size: 14px;
     }
+
 
     #categories-container {
         flex-direction: column;
@@ -327,14 +403,4 @@ footer {
         width: 60px;
         height: 60px;
     }
-}
-
-#search-input2 {
-    width: 90%;
-    /* שנה לערך הרצוי */
-    padding: 10px;
-    /* עדכן את הערכים אם נדרש */
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }

@@ -19,16 +19,17 @@
     <main>
         <div id="advanced-filters">
             <nav>
-                <div> <input type="text" id="search-input" placeholder="Search for a product...">
-                    <button id="search-button">search...</button>
+                <div id="search-bar-container">
+                    <input type="text" id="search-input" placeholder="Search for a product...">
+                    <button id="search-button">Search</button>
                 </div>
                 <div>
-                    <input id="search-input">
-                    <label for="min-price">Min:</label>
+                    <label for="min-price">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Min
+                        price:</label>
                     <input type="number" id="min-price" placeholder="min" min="0">
-                    <label for="max-price">Max:</label>
+                    <label for="max-price">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max price:</label>
                     <input type="number" id="max-price" placeholder="max" min="0">
-                    <label for="rating">Product rating:</label>
+                    <label for="rating"></label>
                     <select id="rating">
                         <option value="">Select a rating</option>
                         <option value="1">1 stars and above</option>
@@ -37,7 +38,8 @@
                         <option value="4">4 stars and above</option>
                         <option value="5">5 stars</option>
                     </select>
-                    <button id="filter-button">filter</button>
+                    <button id="filter-button">Filter</button>
+
                 </div>
             </nav>
         </div>
