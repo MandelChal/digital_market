@@ -29,7 +29,7 @@ body {
     .product-image-section {
         width: 65%;
         /* הגדלנו את הרוחב של אזור התמונה */
-        padding-right: 20px;
+        padding-right: 10px;
     }
 
     .product-info-section {
@@ -74,7 +74,7 @@ body {
         width: 100%;
         padding: 15px 20px;
         /* הגדלנו מעט את הפדינג */
-        background-color: #4CAF50;
+        background-color: #FD3C73;
         color: white;
         border: none;
         cursor: pointer;
@@ -267,6 +267,7 @@ header a {
     text-decoration: none;
 }
 
+
 #cart-button {
     background: url('https://icons.iconarchive.com/icons/fasticon/shop-cart/128/shop-cart-icon.png') no-repeat center;
     width: 110px;
@@ -279,6 +280,7 @@ header a {
     font-size: 20px;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
     font-family: 'Bookman';
+    /* font-family: 'Bookman'; */
 }
 
 .header-logo {
@@ -495,7 +497,7 @@ main {
     white-space: nowrap;
     width: 100%;
     padding: 0px 0;
-    background-color: #ffffff;
+    background-color: #e1f0f5;
     margin-bottom: 20px;
     box-sizing: border-box;
 }
@@ -523,7 +525,7 @@ main {
 }
 
 .category-card:hover {
-    background-color: #ffffff;
+    background-color: #e1f0f5;
     transform: scale(1.1);
 }
 
@@ -729,9 +731,9 @@ footer {
     }
 
 
-    #categories-container {
+    /* #categories-container {
         flex-direction: column;
-    }
+    } */
 
     .category-card {
         width: 100px;
@@ -772,7 +774,91 @@ footer {
     /* צבע רקע בעת מעבר עכבר */
 }
 
+ul#liked-products-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul#liked-products-list .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #f9f9f9;
+    background-color: #f9f9f9;
+    margin: 10px;
+    width: 200px;
+}
+
+ul#liked-products-list .product-card img {
+    width: 100px;
+    height: auto;
+}
+
+a {
+    color: #FD3C73;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
 #checkout:active {
     background-color: #eeacbe;
     /* צבע רקע בעת לחיצה */
+}
+
+.like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    color: #FD3C73;
+}
+
+.like-button-s {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #FD3C73;
+}
+
+.like-button .like-icon {
+    color: #FD3C73;
+    /* Default color for the empty heart */
+}
+
+.like-button.liked .like-icon {
+    color: #FD3C73;
+    /* Color when the heart is filled */
+}
+
+#cart-content {
+    text-align: center;
+    /* מרכז את הטקסט באופן אופקי */
+    display: flex;
+    justify-content: center;
+    /* מרכז את התוכן באופן אופקי */
+
+}
+
+#like-button-w {
+    font-size: 48px;
+    /* גודל האייקון */
+    background: none;
+    /* הסרת רקע הכפתור */
+    border: none;
+    margin-right: 20px;
+    /* הוספת מרווח מימין */
+    cursor: pointer;
+    color: red;
+    /* שינוי צבע האייקון */
 }

@@ -181,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="product-info-section">
                             <button id="add-to-cart">Add to cart</button>
+                            <button id="like-button" class="like-button">&#9825;</button>
                             <div id="product-reviews">
                                 <h3>Customer reviews</h3>
                             </div>
@@ -191,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const productImage = document.querySelector('#product-images img');
 
                 document.getElementById('add-to-cart').addEventListener('click', () => addToCart(product));
+                document.getElementById('like-button').addEventListener('click', () => addTolike(product));
                 document.getElementById('prev-image').addEventListener('click', () => {
                     currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : product.images.length - 1;
                     productImage.src = product.images[currentImageIndex];
@@ -215,6 +217,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     reviewsDiv.innerHTML += '<p>No reviews available for this item</p>';
                 }
+
+                // Add event listener for Like button
+                document.getElementById('like-button').addEventListener('click', () => toggleLike(product.id));
             });
     }
 
@@ -239,4 +244,36 @@ document.addEventListener('DOMContentLoaded', () => {
         categoriesDiv.style.display = 'flex';  // Show categories
         loadHomePage();  // Load the homepage content
     });
+
+    function addTolike(product) {
+        let likedProducts = JSON.parse(localStorage.getItem('likedProducts')) || [];
+        if (!likedProducts.some(p => p.id === product.id)) {
+            likedProducts.push(product);
+            localStorage.setItem('likedProducts', JSON.stringify(likedProducts));
+            // alert(`${product.title} added to liked products`);
+        } else {
+            alert(`${product.title} is already in liked products`);
+        }
+    }
+
+    // דוגמה לאיך להוסיף מוצר לרשימת האהובים מתוך פונקציה קיימת
+    document.getElementById('like-button').addEventListener('click', () => addTolike(product));
+    homeLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        categoriesDiv.style.display = 'flex';  // Show categories
+        loadHomePage();  // Load the homepage content
+    });
+    function toggleLike(productId) {
+        const likeButton = document.getElementById('like-button');
+        if (likeButton.classList.contains('liked')) {
+            likeButton.classList.remove('liked');
+            likeButton.innerHTML = '&#9825;'; // Unfilled heart
+            // Remove from local storage or backend as necessary
+        } else {
+            likeButton.classList.add('liked');
+            likeButton.innerHTML = '&#10084;'; // Filled heart
+            // Add to local storage or backend as necessary
+        }
+    }
+
 });
