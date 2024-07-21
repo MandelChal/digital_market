@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (categoryImages[category]) {
                         categoryCard.innerHTML = `
                             <img src="${categoryImages[category]}"  class="category-image"><ar\>
-                            
                             <p>${category}</p>
                         `;
                     } else {
@@ -99,11 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     searchButton.addEventListener('click', () => {
-
-
-
-
-
         const query = searchInput.value;
         if (query) {
             fetch(`https://dummyjson.com/products/search?q=${query}`)
