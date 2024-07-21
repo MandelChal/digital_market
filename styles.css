@@ -29,7 +29,7 @@ body {
     .product-image-section {
         width: 65%;
         /* הגדלנו את הרוחב של אזור התמונה */
-        padding-right: 10px;
+        padding-right: 0px;
     }
 
     .product-info-section {
