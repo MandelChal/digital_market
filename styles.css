@@ -744,112 +744,35 @@ footer {
     }
 }
 
-#favorites-button {
-    background: none;
-    width: auto;
-    margin-left: 20px;
-    font-size: 24px;
-    cursor: pointer;
-}
+/* styles.css */
 
-.toggle-favorite {
-    background: none;
+#checkout {
+    background-color: #FD3C73;
+    /* צבע רקע ירוק */
+    color: white;
+    /* צבע טקסט לבן */
+    padding: 8px 40px;
+    /* ריווח פנימי */
     border: none;
+    /* ללא גבול */
+    border-radius: 5px;
+    /* פינות מעוגלות */
     cursor: pointer;
-    padding: 5px;
-    font-size: 24px;
+    /* מצביע עכבר */
+    font-size: 16px;
+    /* גודל טקסט */
+    font-weight: bold;
+    /* עובי טקסט */
+    transition: background-color 0.3s ease;
+    /* אפקט מעבר */
 }
 
-.heart-path {
-    fill: none;
-    stroke: #FD3C73;
-    stroke-width: 2;
+#checkout:hover {
+    background-color: #82072a;
+    /* צבע רקע בעת מעבר עכבר */
 }
 
-.heart-path.favorited {
-    fill: #FD3C73;
-    stroke: #FD3C73;
-}
-
-#favorites-list {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    background: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    max-width: 300px;
-    z-index: 1000;
-}
-
-#favorites-list .product-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin: 10px;
-    width: 100%;
-}
-
-#favorites-list .product-card img {
-    width: 100px;
-    height: auto;
-}
-
-#favorites-button {
-    background: none;
-    width: auto;
-    margin-left: 20px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.toggle-favorite {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    font-size: 24px;
-}
-
-.heart-path {
-    fill: none;
-    stroke: #FD3C73;
-    stroke-width: 2;
-}
-
-.heart-path.favorited {
-    fill: #FD3C73;
-    stroke: #FD3C73;
-}
-
-#favorites-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#favorites-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.product-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin: 10px;
-    width: 200px;
-}
-
-.product-card img {
-    width: 100px;
-    height: auto;
+#checkout:active {
+    background-color: #eeacbe;
+    /* צבע רקע בעת לחיצה */
 }

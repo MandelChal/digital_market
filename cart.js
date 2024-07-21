@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     if (cart.length === 0) {
-        cartItemsDiv.innerHTML = '<p>סל הקניות שלך ריק.</p>';
+        cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
         totalAmountP.innerHTML = '';
         checkoutButton.style.display = 'none'; // Hide the checkout button if the cart is empty
         return;
@@ -26,14 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="quantity">&nbsp;&nbsp;&nbsp${product.quantity}&nbsp;&nbsp;&nbsp</span>
                 <button class="increase-quantity" data-id="${product.id}">+</button>
             </div>
-            <button class="remove-item" data-id="${product.id}">הסר</button>
+            <button class="remove-item" data-id="${product.id}">Remove</button>
         `;
         cartItemsDiv.appendChild(productCard);
         totalAmount += product.price * product.quantity;
     });
 
     totalAmount = roundToTwo(totalAmount);
-    totalAmountP.innerHTML = `סכום כולל: ₪${totalAmount}`;
+    totalAmountP.innerHTML = `Total amount: ₪${totalAmount}`;
 
     document.querySelectorAll('.increase-quantity').forEach(button => {
         button.addEventListener('click', (e) => {
@@ -78,7 +78,7 @@ function removeFromCart(productId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart = cart.filter(product => product.id !== productId);
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert('מוצר הוסר מהסל');
+    alert('Item removed from cart');
     location.reload();
 }
 
@@ -89,19 +89,19 @@ function checkout() {
             <h2>טופס הזמנה</h2>
             <form id="checkout-form">
                 <div class="form-group">
-                    <label for="name">שם מלא:</label>
+                    <label for="name">Full name</label>
                     <input type="text" id="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="address">כתובת למשלוח:</label>
+                    <label for="address">Shipping address:</label>
                     <input type="text" id="address" required>
                 </div>
                 <div class="form-group">
-                    <label for="credit-card">מספר כרטיס אשראי:</label>
+                    <label for="credit-card">Credit card number:</label>
                     <input type="text" id="credit-card" required>
                 </div>
                 <div class="form-group">
-                    <label for="expiry">תוקף:</label>
+                    <label for="expiry">Expiration date:</label>
                     <input type="text" id="expiry" placeholder="MM/YY" required>
                 </div>
                 <div class="form-group">
@@ -113,7 +113,7 @@ function checkout() {
                     <img src="https://cdn-icons-png.flaticon.com/128/349/349228.png" alt="MasterCard">
                     <img src="https://cdn-icons-png.flaticon.com/128/349/349230.png" alt="American Express">
                 </div>
-                <button type="submit">אישור תשלום</button>
+                <button type="submit">Payment confirmation</button>
             </form>
         </div>
     `;
@@ -123,14 +123,15 @@ function checkout() {
 
     document.getElementById('checkout-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('הרכישה בוצעה בהצלחה! המוצרים בדרך אלייך.');
+        alert('Your purchase was successful! The items are on their way to you.');
 
         localStorage.removeItem('cart');
 
         // הצגת ה-GIF
         cartItemsDiv.innerHTML = `
             <div class="success-container">
-                <h2>סל הקניות שלך ריק</h2>
+                <h3>Thank you for shopping with us!</h3>
+                <h2>Your cart is empty</h2>
                 <img src="https://cdn.dribbble.com/users/249246/screenshots/2958948/shopping.gif" alt="Successful Purchase">
             </div>
         `;
@@ -156,5 +157,5 @@ function addToCart(product) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${product.title} נוסף לסל הקניות!`);
+    alert(`${product.title} Added to cart`);
 }
