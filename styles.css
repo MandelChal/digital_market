@@ -317,7 +317,7 @@ header a {
 
 #home-link {
     position: absolute;
-    left: 30%;
+    left: 40%;
     transform: translateX(-50%);
     white-space: nowrap;
     color: #FD3C73;
@@ -880,7 +880,7 @@ header {
 }
 
 .header-logo {
-    width: 240px;
+    width: 220px;
     margin-right: auto;
 }
 
