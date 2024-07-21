@@ -12,8 +12,11 @@
 <body>
     <header>
         <img src="logo.jpg" alt="Logo" class="header-logo">
-        <a href="#" id="home-link">Digital Market</a>
+        <a href="index.html" id="home-link">Digital Market</a>
+
         <button id="cart-button" onclick="window.location.href='cart.html'">Cart</button>
+        <button class="toggle-favorite" data-id="${product.id}">&#9825;</button> <!-- כפתור ה-Like -->
+
     </header>
 
     <main>
@@ -21,7 +24,6 @@
             <nav>
                 <div id="search-bar-container">
                     <input type="text" id="search-input" placeholder="Search for a product...">
-                    <button id="search-button">Search</button>
                     <button id="search-button">Search</button>
                 </div>
                 <div>

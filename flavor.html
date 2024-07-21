@@ -4,33 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>סל קניות</title>
+    <title>המוצרים המועדפים</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="cart.js"></script>
+    <script defer src="favorites.js"></script>
 </head>
 
 <body>
     <header>
-
         <img src="logo.jpg" alt="Logo" class="header-logo">
-
         <a href="index.html" id="home-link">Digital Market</a>
+        <button id="favorites-button" onclick="window.location.href='favorites.html'">❤️</button>
         <button id="cart-button" onclick="window.location.href='cart.html'">Cart</button>
-
     </header>
-    <div id="categories-container">
-        <div id="categories"></div>
-    </div>
 
-    <main id="cart-content">
-        <h2>סל קניות</h2>
-        <strong>
-            <p id="total-amount"></p>
-        </strong>
-        <div id="cart-items"></div>
-
-        <button id="checkout">לתשלום</button>
+    <main id="favorites-content">
+        <h2>המוצרים המועדפים</h2>
+        <div id="favorites-items"></div>
     </main>
+
     <footer>
         <div class="footer-content">
             <p>For inquiries, contact us:</p>

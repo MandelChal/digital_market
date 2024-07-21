@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const cartItemsDiv = document.getElementById('cart-items');
     const checkoutButton = document.getElementById('checkout');
@@ -11,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cart.length === 0) {
         cartItemsDiv.innerHTML = '<p>סל הקניות שלך ריק.</p>';
         totalAmountP.innerHTML = '';
+        checkoutButton.style.display = 'none'; // Hide the checkout button if the cart is empty
         return;
     }
 
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>₪${product.price}</p>
             <div class="quantity-control">
                 <button class="decrease-quantity" data-id="${product.id}">-</button>
-                <span class="quantity">${product.quantity}</span>
+                <span class="quantity">&nbsp;&nbsp;&nbsp${product.quantity}&nbsp;&nbsp;&nbsp</span>
                 <button class="increase-quantity" data-id="${product.id}">+</button>
             </div>
             <button class="remove-item" data-id="${product.id}">הסר</button>
@@ -120,20 +118,28 @@ function checkout() {
         </div>
     `;
 
+    // להסתיר את כפתור "לתשלום" לאחר טעינת הטופס
+    document.getElementById('checkout').style.display = 'none';
+
     document.getElementById('checkout-form').addEventListener('submit', (e) => {
         e.preventDefault();
         alert('הרכישה בוצעה בהצלחה! המוצרים בדרך אלייך.');
 
         localStorage.removeItem('cart');
-        document.getElementById('checkout').addEventListener('click', function () {
-            this.style.display = 'none';
-        });
-        location.reload();
-        document.getElementById('checkout').addEventListener('click', function () {
-            this.style.display = 'none';
-        });
+
+        // הצגת ה-GIF
+        cartItemsDiv.innerHTML = `
+            <div class="success-container">
+                <h2>סל הקניות שלך ריק</h2>
+                <img src="https://cdn.dribbble.com/users/249246/screenshots/2958948/shopping.gif" alt="Successful Purchase">
+            </div>
+        `;
+
+        // להסתיר את כפתור "לתשלום"
+        document.getElementById('checkout').style.display = 'none';
     });
 }
+
 function roundToTwo(num) {
     return Math.round(num * 100) / 100;
 }
@@ -152,12 +158,3 @@ function addToCart(product) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${product.title} נוסף לסל הקניות!`);
 }
-document.getElementById('checkout').addEventListener('click', function () {
-    this.style.display = 'none';
-});
-
-
-
-
-
-

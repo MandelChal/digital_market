@@ -8,6 +8,77 @@ document.addEventListener('DOMContentLoaded', () => {
     const minPriceInput = document.getElementById('min-price');
     const maxPriceInput = document.getElementById('max-price');
     const ratingSelect = document.getElementById('rating');
+    // פונקציה להוספת מוצר לרשימת הלייקים
+    function toggleFavorite(productId) {
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        if (favorites.includes(productId)) {
+            favorites = favorites.filter(id => id !== productId);
+        } else {
+            favorites.push(productId);
+        }
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        loadFavorites();
+    }
+
+    // פונקציה לטעינת המוצרים שסומנו בלייק
+    function loadFavorites() {
+        const favoritesContent = document.getElementById('favorites-content');
+        if (favoritesContent) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            fetch('https://dummyjson.com/products')
+                .then(response => response.json())
+                .then(data => {
+                    const favoriteProducts = data.products.filter(product => favorites.includes(product.id));
+                    displayFavoriteProducts(favoriteProducts);
+                });
+        }
+    }
+
+    // פונקציה להצגת המוצרים שסומנו בלייק
+    function displayFavoriteProducts(products) {
+        const favoritesItems = document.getElementById('favorites-items');
+        favoritesItems.innerHTML = '';
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.innerHTML = `
+            <img src="${product.thumbnail}" alt="${product.title}">
+            <h3>${product.title}</h3>
+            <p>₪${product.price}</p>
+        `;
+            favoritesItems.appendChild(productCard);
+        });
+    }
+
+    // הוספת אירוע לחיצה על כפתור הלייק
+    document.body.addEventListener('click', function (e) {
+        if (e.target.classList.contains('toggle-favorite')) {
+            const productId = parseInt(e.target.getAttribute('data-id'));
+            toggleFavorite(productId);
+            e.target.classList.toggle('favorited');
+        }
+    });
+
+    // הצגת מוצרים
+    function displayProducts(products) {
+        contentDiv.innerHTML = '';
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.innerHTML = `
+            <img src="${product.thumbnail}" alt="${product.title}">
+            <h3>${product.title}</h3>
+            <p>₪${product.price}</p>
+            <button class="toggle-favorite" data-id="${product.id}">&#9825;</button>
+        `;
+            contentDiv.appendChild(productCard);
+        });
+    }
+
+    // קריאה לפונקציה לטעינת לייקים כשהדף נטען
+    loadFavorites();
+
+
 
     // Map of category to image URL
     const categoryImages = {
@@ -15,26 +86,26 @@ document.addEventListener('DOMContentLoaded', () => {
         'fragrances': 'https://icons.iconarchive.com/icons/iconarchive/mothers-day/128/Perfume-Bottle-icon.png',
         'furniture': 'https://icons.iconarchive.com/icons/visualpharm/office-space/128/chair-icon.png',
         'groceries': 'https://icons.iconarchive.com/icons/fixicon/market/128/flour-icon.png',
-        'home-decoration': 'https://www.iconninja.com/files/37/794/498/lamp-icon.png',
+        'home-decoration': '                                                        ',
         'kitchen-accessories': 'https://icons.iconarchive.com/icons/julie-henriksen/kitchen/128/Cutlery-Spoon-Fork-Knife-icon.png',
         'laptops': 'https://icons.iconarchive.com/icons/media-design/hydropro-v2/128/Laptop-icon.png',
-        'mens-shirts': 'https://www.iconninja.com/files/7/835/620/shirt-icon.png',
+        'mens-shirts': '                                                        ',
         'mens-shoes': 'https://icons.iconarchive.com/icons/mattrich/adidas/128/Adidas-Shoe-icon.png',
         'tops': 'https://icons.iconarchive.com/icons/google/noto-emoji-people-clothing-objects/128/12183-dress-icon.png',
         'mobile-accessories': 'https://icons.iconarchive.com/icons/iconshock/dj/128/headset-icon.png',
-        'motorcycle': 'https://www.iconninja.com/files/104/763/828/motorcycle-icon.png',
+        'motorcycle': '                                                               ',
         'skin-care': 'https://icons.iconarchive.com/icons/robinweatherall/cleaning/128/bottles-icon.png',
         'smartphones': 'https://icons.iconarchive.com/icons/kyo-tux/aeon/128/Extras-iPhone-icon.png',
         'sports-accessories': 'https://icons.iconarchive.com/icons/kevin-andersson/sportset/128/Soccer-icon.png',
         'sunglasses': 'https://icons.iconarchive.com/icons/proycontec/beach/128/sunglasses-icon.png',
-        'tablets': 'https://www.iconninja.com/files/296/413/283/tablet-icon.png',
+        'tablets': '                                                           ',
         'mens-watches': 'https://icons.iconarchive.com/icons/r34n1m4ted/chanel/128/WATCH-icon.png',
         'vehicle': 'https://icons.iconarchive.com/icons/cemagraphics/classic-cars/128/vw-beetle-icon.png',
-        'womens-bags': 'https://www.iconninja.com/files/156/35/796/bag-icon.png',
-        'womens-jewellery': 'https://www.iconninja.com/files/543/11/732/necklace-icon.png',
-        'womens-dresses': 'https://www.iconninja.com/files/203/690/423/dress-icon.png',
+        'womens-bags': '                                                       ',
+        'womens-jewellery': '                                                            ',
+        'womens-dresses': '                                                          ',
         'womens-shoes': 'https://icons.iconarchive.com/icons/google/noto-emoji-people-clothing-objects/128/12197-high-heeled-shoe-icon.png',
-        'womens-watches': 'https://www.iconninja.com/files/908/745/303/chopard-watch-icon.png'
+        'womens-watches': '                                                                  '
 
 
 
