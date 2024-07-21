@@ -5,6 +5,249 @@ body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    background-color: #e1f0f5;
+
+    padding-bottom: 100px;
+    /* להוסיף padding בתחתית הדף */
+
+
+}
+
+.product-page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product-image-section {
+    .product-page {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .product-image-section {
+        width: 65%;
+        /* הגדלנו את הרוחב של אזור התמונה */
+        padding-right: 20px;
+    }
+
+    .product-info-section {
+        width: 30%;
+        /* הקטנו מעט את הרוחב של אזור המידע */
+    }
+
+    #product-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    #product-images {
+        margin: 0 10px;
+        width: 80%;
+        /* הגדרנו רוחב קבוע לקונטיינר של התמונה */
+    }
+
+    #product-images img {
+        width: 100%;
+        /* התמונה תמלא את כל הרוחב של הקונטיינר שלה */
+        height: auto;
+        max-height: 500px;
+        /* הגדרנו גובה מקסימלי לתמונה */
+        object-fit: contain;
+        /* מבטיח שכל התמונה תהיה גלויה */
+    }
+
+    #prev-image,
+    #next-image {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #add-to-cart {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+        /* הגדלנו מעט את הפדינג */
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+        /* הגדלנו מעט את גודל הטקסט */
+    }
+
+    #product-reviews {
+        margin-top: 20px;
+    }
+
+    .review {
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+
+    /* הוספנו סגנונות חדשים לשיפור המראה הכללי */
+    .product-image-section h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .product-image-section p {
+        margin-bottom: 15px;
+    }
+
+    .product-image-section .price {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #4CAF50;
+    }
+
+    width: 65%;
+    /* הגדלנו את הרוחב של אזור התמונה */
+    padding-right: 20px;
+}
+
+.product-info-section {
+    width: 30%;
+    /* הקטנו מעט את הרוחב של אזור המידע */
+}
+
+#product-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#product-images {
+    margin: 0 10px;
+    width: 80%;
+    /* הגדרנו רוחב קבוע לקונטיינר של התמונה */
+}
+
+#product-images img {
+    width: 100%;
+    /* התמונה תמלא את כל הרוחב של הקונטיינר שלה */
+    height: auto;
+    max-height: 500px;
+    /* הגדרנו גובה מקסימלי לתמונה */
+    object-fit: contain;
+    /* מבטיח שכל התמונה תהיה גלויה */
+}
+
+#prev-image,
+#next-image {
+    background-color: #FD3C73;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    /* הגדלנו מעט את הפדינג */
+    background-color: #FD3C73;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    /* הגדלנו מעט את גודל הטקסט */
+}
+
+#product-reviews {
+    margin-top: 20px;
+}
+
+.review {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+/* הוספנו סגנונות חדשים לשיפור המראה הכללי */
+.product-image-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.product-image-section p {
+    margin-bottom: 15px;
+}
+
+.product-image-section .price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.checkout-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.credit-card-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.credit-card-icons img {
+    width: 50px;
+    margin: 0 10px;
+}
+
+#checkout-form button {
+    display: block;
+    width: 95%;
+    padding: 12px;
+    background-color: #FD3C73;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#checkout-form button:hover {
+    background-color: #FD3C73;
 }
 
 header {
@@ -26,20 +269,20 @@ header a {
 
 #cart-button {
     background: url('https://icons.iconarchive.com/icons/fasticon/shop-cart/128/shop-cart-icon.png') no-repeat center;
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     background-size: contain;
     border: none;
     cursor: pointer;
     margin-left: auto;
-    color: #01e1f5;
+    color: #FD3C73;
     font-size: 20px;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
     font-family: 'Bookman';
 }
 
 .header-logo {
-    width: 150px;
+    width: 240px;
     margin-right: auto;
 }
 
@@ -57,10 +300,12 @@ header a {
 
 main {
     padding: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
+    background-color: #e1f0f5;
 }
 
 #advanced-filters {
@@ -203,7 +448,7 @@ main {
     white-space: nowrap;
     width: 100%;
     padding: 0px 0;
-    background-color: #e1f0f5;
+    background-color: #ffffff;
     margin-bottom: 20px;
     box-sizing: border-box;
 }
@@ -211,9 +456,12 @@ main {
 #categories-container div {
     display: inline-block;
     padding: 20px;
+
     margin-right: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    /* background-color: #fff; */
+    /* background-color: #e1f0f5; */
+    background-color: #e1f0f5;
+    /* border: 1px solid #ccc; */
     cursor: pointer;
 }
 
@@ -221,15 +469,15 @@ main {
     display: inline-block;
     padding: 10px;
     margin-right: 10px;
-    background-color: #fff;
+    background-color: #e1f0f5;
     border: 1px solid #ccc;
     text-align: center;
     cursor: pointer;
 }
 
 .category-card:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.2);
+    background-color: #ffffff;
+    transform: scale(1.1);
 }
 
 #content {
@@ -238,18 +486,6 @@ main {
     justify-content: center;
 }
 
-.product-card {
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-}
-
-.product-card img {
-    width: 100px;
-    height: auto;
-}
 
 #product-images img {
     width: 150px;
@@ -268,7 +504,8 @@ main {
     align-items: center;
     text-align: center;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #f9f9f9;
+    background-color: #f9f9f9;
     margin: 10px;
     width: 200px;
 }
@@ -298,18 +535,33 @@ quantity-control span {
 }
 
 footer {
-    padding-top: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #060606;
+    color: rgb(254, 253, 253);
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    margin-top: 30px;
 }
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content a {
+    color: #FD3C73;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
 
 #categories {
     display: flex;
+    background-color: #e1f0f5;
     overflow-x: auto;
     padding: 10px 0;
     white-space: nowrap;
@@ -327,7 +579,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: #073849;
+    /* צבע הרקע הפנימי */
     cursor: pointer;
     transition: background-color 0.3s;
     overflow: hidden;
@@ -351,11 +604,50 @@ footer {
     display: block;
 }
 
+.category-card:hover {
+
+    /* צבע הרקע בעת מעבר העכבר */
+    transform: scale(1.1);
+    background-color: #00294d;
+    /* צבע רקע חדש בעת מעבר עכבר */
+    border: 1px solid #333;
+}
+
+
+.category-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.category-card span {
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
 #home-link:hover {
     font-size: 60px;
     /* שנה את הערך לגודל הפונט הרצוי */
     transition: font-size 0.3s ease;
     /* הוספת מעבר חלק */
+}
+
+.product-card img {
+    width: 100px;
+    height: auto;
+}
+
+.product-card:hover {
+    transform: scale(1.1);
+    background-color: #f0f8ff;
+    /* צבע רקע חדש בעת מעבר עכבר */
+    border: 1px solid #333;
+    /* מסגרת דקה בעת מעבר עכבר */
 }
 
 

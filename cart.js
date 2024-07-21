@@ -87,24 +87,53 @@ function removeFromCart(productId) {
 function checkout() {
     const cartItemsDiv = document.getElementById('cart-items');
     cartItemsDiv.innerHTML = `
-        <h2>טופס הזמנה</h2>
-        <form id="checkout-form">
-            <label>כתובת למשלוח:</label>
-            <input type="text" id="address" required>
-            <label>מספר כרטיס אשראי:</label>
-            <input type="text" id="credit-card" required>
-            <button type="submit">אישור</button>
-        </form>
+        <div class="checkout-container">
+            <h2>טופס הזמנה</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">שם מלא:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">כתובת למשלוח:</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="credit-card">מספר כרטיס אשראי:</label>
+                    <input type="text" id="credit-card" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry">תוקף:</label>
+                    <input type="text" id="expiry" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" required>
+                </div>
+                <div class="credit-card-icons">
+                    <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="Visa">
+                    <img src="https://cdn-icons-png.flaticon.com/128/349/349228.png" alt="MasterCard">
+                    <img src="https://cdn-icons-png.flaticon.com/128/349/349230.png" alt="American Express">
+                </div>
+                <button type="submit">אישור תשלום</button>
+            </form>
+        </div>
     `;
 
     document.getElementById('checkout-form').addEventListener('submit', (e) => {
         e.preventDefault();
         alert('הרכישה בוצעה בהצלחה! המוצרים בדרך אלייך.');
+
         localStorage.removeItem('cart');
+        document.getElementById('checkout').addEventListener('click', function () {
+            this.style.display = 'none';
+        });
         location.reload();
+        document.getElementById('checkout').addEventListener('click', function () {
+            this.style.display = 'none';
+        });
     });
 }
-
 function roundToTwo(num) {
     return Math.round(num * 100) / 100;
 }
@@ -123,6 +152,9 @@ function addToCart(product) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${product.title} נוסף לסל הקניות!`);
 }
+document.getElementById('checkout').addEventListener('click', function () {
+    this.style.display = 'none';
+});
 
 
 

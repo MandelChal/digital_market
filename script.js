@@ -160,43 +160,58 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(product => {
                 let currentImageIndex = 0;
                 contentDiv.innerHTML = `
-                    <h2>${product.title}</h2>
-                    <p>${product.description}</p>
-                    <p>₪${product.price}</p>
-                    <div id="product-images">
-                        <img src="${product.images[currentImageIndex]}" alt="${product.title}">
-                    </div>
-                    <button id="prev-image">תמונה קודמת</button>
-                    <button id="next-image">תמונה הבאה</button>
-                    <button id="add-to-cart">הוסף לסל קניות</button>
-                    <div id="product-reviews">
-                        <h3>הערות רוכשים</h3>
+                    <div class="product-page">
+                        <div class="product-image-section">
+                            <h2>${product.title}</h2>
+                            <p>${product.description}</p>
+                            <p>₪${product.price}</p>
+                            <div id="product-image-container">
+                                <button id="prev-image"> < </button>
+                                <div id="product-images">
+                                    <img src="${product.images[currentImageIndex]}" alt="${product.title}">
+                                </div>
+                                <button id="next-image"> > </button>
+                            </div>
+                        </div>
+                        <div class="product-info-section">
+                            <button id="add-to-cart">הוסף לסל קניות</button>
+                            <div id="product-reviews">
+                                <h3>הערות רוכשים</h3>
+                            </div>
+                        </div>
                     </div>
                 `;
+
+                const productImage = document.querySelector('#product-images img');
 
                 document.getElementById('add-to-cart').addEventListener('click', () => addToCart(product));
                 document.getElementById('prev-image').addEventListener('click', () => {
                     currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : product.images.length - 1;
-                    document.querySelector('#product-images img').src = product.images[currentImageIndex];
+                    productImage.src = product.images[currentImageIndex];
                 });
                 document.getElementById('next-image').addEventListener('click', () => {
                     currentImageIndex = (currentImageIndex < product.images.length - 1) ? currentImageIndex + 1 : 0;
-                    document.querySelector('#product-images img').src = product.images[currentImageIndex];
+                    productImage.src = product.images[currentImageIndex];
                 });
 
                 const reviewsDiv = document.getElementById('product-reviews');
-                product.reviews.forEach(review => {
-                    const reviewDiv = document.createElement('div');
-                    reviewDiv.className = 'review';
-                    reviewDiv.innerHTML = `
-                        <p><strong>${review.reviewerName}</strong></p>
-                        <p>${review.comment}</p>
-                        <p>דירוג: ${review.rating}</p>
-                    `;
-                    reviewsDiv.appendChild(reviewDiv);
-                });
+                if (product.reviews && product.reviews.length > 0) {
+                    product.reviews.forEach(review => {
+                        const reviewDiv = document.createElement('div');
+                        reviewDiv.className = 'review';
+                        reviewDiv.innerHTML = `
+                            <p><strong>${review.reviewerName}</strong></p>
+                            <p>${review.comment}</p>
+                            <p>דירוג: ${review.rating}</p>
+                        `;
+                        reviewsDiv.appendChild(reviewDiv);
+                    });
+                } else {
+                    reviewsDiv.innerHTML += '<p>אין ביקורות זמינות לפריט זה.</p>';
+                }
             });
     }
+
 
     function addToCart(product) {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
