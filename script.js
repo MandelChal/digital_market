@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'womens-jewellery': 'https://www.iconninja.com/files/543/11/732/necklace-icon.png',
         'womens-dresses': 'https://www.iconninja.com/files/203/690/423/dress-icon.png',
         'womens-shoes': 'https://icons.iconarchive.com/icons/google/noto-emoji-people-clothing-objects/128/12197-high-heeled-shoe-icon.png',
-        'womens-watches': 'https://www.iconninja.com/files/908/745/303/chopard-watch-icon.png',
+        'womens-watches': 'https://www.iconninja.com/files/908/745/303/chopard-watch-icon.png'
 
 
         // Add more categories and their images here
@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (categoryImages[category]) {
                         categoryCard.innerHTML = `
                             <img src="${categoryImages[category]}"  class="category-image"><ar\>
+                            
                             <p>${category}</p>
                         `;
                     } else {
@@ -98,6 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     searchButton.addEventListener('click', () => {
+
+
+
+
+
         const query = searchInput.value;
         if (query) {
             fetch(`https://dummyjson.com/products/search?q=${query}`)
