@@ -60,6 +60,7 @@ body {
         /* מבטיח שכל התמונה תהיה גלויה */
     }
 
+
     #prev-image,
     #next-image {
         background-color: #333;
@@ -270,8 +271,9 @@ header a {
 
 #cart-button {
     background: url('https://icons.iconarchive.com/icons/fasticon/shop-cart/128/shop-cart-icon.png') no-repeat center;
-    width: 90px;
-    height: 90px;
+    width: 110px;
+    height: 110px;
+    padding: 20px;
     background-size: contain;
     border: none;
     cursor: pointer;
@@ -297,13 +299,15 @@ header a {
 
 #like-button-w {
     font-size: 48px;
-    /* גודל האייקון */
+    margin: 0;
+    padding: 20px;
+    /* margin-right: 5px; */
+
     background: none;
-    /* הסרת רקע הכפתור */
     border: none;
-    margin-right: 20px;
-    /* הוספת מרווח מימין */
+    background: none;
     cursor: pointer;
+
     color: red;
     /* שינוי צבע האייקון */
 }
@@ -318,6 +322,9 @@ header a {
     font-family: 'Impact';
     text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000;
     letter-spacing: 0.03em;
+
+
+
 }
 
 main {
@@ -860,3 +867,33 @@ a:hover {
     color: #FD3C73;
     /* Color when the heart is filled */
 }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: #e1f0f5;
+}
+
+.header-logo {
+    width: 240px;
+    margin-right: auto;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* #like-button-w,
+#cart-button {
+    margin: 0;
+    padding: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 24px;
+} */
