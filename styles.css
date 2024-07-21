@@ -288,6 +288,26 @@ header a {
     margin-right: auto;
 }
 
+#cart-content {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#like-button-w {
+    font-size: 48px;
+    /* גודל האייקון */
+    background: none;
+    /* הסרת רקע הכפתור */
+    border: none;
+    margin-right: 20px;
+    /* הוספת מרווח מימין */
+    cursor: pointer;
+    color: red;
+    /* שינוי צבע האייקון */
+}
+
 #home-link {
     position: absolute;
     left: 50%;
@@ -839,26 +859,4 @@ a:hover {
 .like-button.liked .like-icon {
     color: #FD3C73;
     /* Color when the heart is filled */
-}
-
-#cart-content {
-    text-align: center;
-    /* מרכז את הטקסט באופן אופקי */
-    display: flex;
-    justify-content: center;
-    /* מרכז את התוכן באופן אופקי */
-
-}
-
-#like-button-w {
-    font-size: 48px;
-    /* גודל האייקון */
-    background: none;
-    /* הסרת רקע הכפתור */
-    border: none;
-    margin-right: 20px;
-    /* הוספת מרווח מימין */
-    cursor: pointer;
-    color: red;
-    /* שינוי צבע האייקון */
 }
