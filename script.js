@@ -256,7 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // דוגמה לאיך להוסיף מוצר לרשימת האהובים מתוך פונקציה קיימת
     document.getElementById('like-button').addEventListener('click', () => addTolike(product));
     homeLink.addEventListener('click', (event) => {
         event.preventDefault();
