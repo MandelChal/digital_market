@@ -27,8 +27,9 @@ This application employs the DummyJSON API to fetch mock data for products, cate
 - **Loading Categories**:
   ```javascript
   const response = await fetch('https://dummyjson.com/products/category-list');
+Retrieves a list of available product categories.
 
-  Fetching Single Product Details:
+Fetching Single Product Details:
 
 javascript
 Copy code
@@ -57,31 +58,3 @@ Ensure your system meets the following requirements:
 
 A modern web browser
 Active internet connection (for API requests)
-Installation
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-username/digital-market.git
-Navigate to the project directory:
-bash
-Copy code
-cd digital-market
-Open the index.html file in your web browser.
-Project Structure
-bash
-Copy code
-digital-market/
-├── index.html          # Main HTML file
-├── css/
-│   └── styles.css      # CSS for styling
-├── js/
-│   └── script.js       # JavaScript for interactivity
-├── images/
-│   └── [Product images and icons]
-└── README.md           # Project documentation
-
-Future Enhancements
-* Implement user authentication and profile management.
-* Integrate secure payment gateways for transactions.
-* Add user reviews and ratings for products.
-* Optimize performance to enhance loading speeds.
