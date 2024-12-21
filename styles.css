@@ -8,7 +8,7 @@ body {
     background-color: #e1f0f5;
 
     padding-bottom: 150px;
-    /* להוסיף padding בתחתית הדף */
+    
 
 
 }
@@ -28,13 +28,13 @@ body {
 
     .product-image-section {
         width: 65%;
-        /* הגדלנו את הרוחב של אזור התמונה */
+        
         padding-right: 0px;
     }
 
     .product-info-section {
         width: 30%;
-        /* הקטנו מעט את הרוחב של אזור המידע */
+        
     }
 
     #product-image-container {
@@ -52,17 +52,17 @@ body {
 
     #product-images img {
         width: 100%;
-        /* התמונה תמלא את כל הרוחב של הקונטיינר שלה */
+        
         height: auto;
         max-height: 500px;
-        /* הגדרנו גובה מקסימלי לתמונה */
+        
         object-fit: contain;
-        /* מבטיח שכל התמונה תהיה גלויה */
+        
     }
 
     #like-button-w {
         margin-right: 30px;
-        /* התאמת המרווח הרצוי בין הכפתורים */
+        
     }
 
     #prev-image,
@@ -85,7 +85,7 @@ body {
         cursor: pointer;
         margin-bottom: 20px;
         font-size: 1.1em;
-        /* הגדלנו מעט את גודל הטקסט */
+        
     }
 
     #product-reviews {
@@ -97,7 +97,7 @@ body {
         padding: 10px 0;
     }
 
-    /* הוספנו סגנונות חדשים לשיפור המראה הכללי */
+    
     .product-image-section h2 {
         font-size: 1.8em;
         margin-bottom: 10px;
@@ -114,13 +114,13 @@ body {
     }
 
     width: 65%;
-    /* הגדלנו את הרוחב של אזור התמונה */
+    
     padding-right: 20px;
 }
 
 .product-info-section {
     width: 30%;
-    /* הקטנו מעט את הרוחב של אזור המידע */
+    
 }
 
 #product-image-container {
@@ -133,17 +133,17 @@ body {
 #product-images {
     margin: 0 10px;
     width: 80%;
-    /* הגדרנו רוחב קבוע לקונטיינר של התמונה */
+    
 }
 
 #product-images img {
     width: 100%;
-    /* התמונה תמלא את כל הרוחב של הקונטיינר שלה */
+    
     height: auto;
     max-height: 500px;
-    /* הגדרנו גובה מקסימלי לתמונה */
+    
     object-fit: contain;
-    /* מבטיח שכל התמונה תהיה גלויה */
+    
 }
 
 #prev-image,
@@ -159,14 +159,13 @@ body {
     display: block;
     width: 100%;
     padding: 15px 20px;
-    /* הגדלנו מעט את הפדינג */
     background-color: #FD3C73;
     color: white;
     border: none;
     cursor: pointer;
     margin-bottom: 20px;
     font-size: 1.1em;
-    /* הגדלנו מעט את גודל הטקסט */
+    
 }
 
 #product-reviews {
@@ -178,7 +177,7 @@ body {
     padding: 10px 0;
 }
 
-/* הוספנו סגנונות חדשים לשיפור המראה הכללי */
+
 .product-image-section h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
@@ -304,16 +303,12 @@ header a {
     font-size: 48px;
     margin: 0;
     margin-right: 5px;
-    /* גודל האייקון */
     background: none;
-    /* הסרת רקע הכפתור */
-    border: none;
+   border: none;
 
-    /* הוספת מרווח מימין */
     cursor: pointer;
     color: red;
-    /* שינוי צבע האייקון */
-}
+    }
 
 #home-link {
     position: absolute;
@@ -363,54 +358,53 @@ main {
 #search-input {
     width: 38%;
     padding: 12px;
-    /* עדכן את הערכים אם נדרש */
-    margin-right: 10px;
+   margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .remove-item {
     width: auto;
-    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    
     padding: 3px 30px;
-    /* שנה את הערכים לפי הרצון */
+    
     background-color: #a7e3f4;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
-    /* שנה את הערך לפי הרצון */
+
 
 }
 
 
 .increase-quantity {
     width: auto;
-    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    
     padding: 4px 4px;
-    /* שנה את הערכים לפי הרצון */
+    
     background-color: #a7e3f4;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
-    /* שנה את הערך לפי הרצון */
+
 }
 
 .decrease-quantity {
     width: auto;
-    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    
     padding: 4px 5px;
-    /* שנה את הערכים לפי הרצון */
+
     background-color: #a7e3f4;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
-    /* שנה את הערך לפי הרצון */
+    
 
 }
 
@@ -439,16 +433,16 @@ main {
 
 #search-button {
     width: auto;
-    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+
     padding: 10px 15px;
-    /* שנה את הערכים לפי הרצון */
+    
     background-color: #FD3C73;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
-    /* שנה את הערך לפי הרצון */
+
 
 
 }
@@ -457,65 +451,63 @@ main {
 
 #filter-button {
     width: auto;
-    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    
     padding: 10px 15px;
-    /* שנה את הערכים לפי הרצון */
+    
     background-color: #FD3C73;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
-    /* שנה את הערך לפי הרצון */
+
 
 }
 
 #rating {
     width: 25%;
     ;
-    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+    
     padding: 10px 25px;
-    /* שנה את הערכים לפי הרצון */
+
     background-color: #f9f9f9;
     color: rgb(4, 0, 0);
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
-    /* שנה את הערך לפי הרצון */
+    
 
 
 }
 
 #min-price {
     width: 10%;
-    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
+
     padding: 10px 15px;
-    /* שנה את הערכים לפי הרצון */
+    
     background-color: #f9f9f9;
     color: rgb(4, 0, 0);
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
-    /* שנה את הערך לפי הרצון */
+
 
 
 }
 
 #max-price {
     width: 10%;
-    /* מאפשר לכפתור להתאים את רוחבו לתוכן */
     padding: 10px 15px;
     margin-right: 20px;
-    /* שנה את הערכים לפי הרצון */
     background-color: #f9f9f9;
     color: rgb(4, 0, 0);
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
-    /* שנה את הערך לפי הרצון */
+    
 
 }
 
@@ -659,7 +651,6 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #073849;
-    /* צבע הרקע הפנימי */
     cursor: pointer;
     transition: background-color 0.3s;
     overflow: hidden;
@@ -685,10 +676,9 @@ footer {
 
 .category-card:hover {
 
-    /* צבע הרקע בעת מעבר העכבר */
+    
     transform: scale(1.1);
     background-color: #00294d;
-    /* צבע רקע חדש בעת מעבר עכבר */
     border: 1px solid #333;
 }
 
@@ -711,9 +701,9 @@ footer {
 
 #home-link:hover {
     font-size: 60px;
-    /* שנה את הערך לגודל הפונט הרצוי */
+    
     transition: font-size 0.3s ease;
-    /* הוספת מעבר חלק */
+
 }
 
 .product-card img {
@@ -723,14 +713,11 @@ footer {
 
 .product-card:hover {
     transform: scale(1.1);
-    background-color: #f0f8ff;
-    /* צבע רקע חדש בעת מעבר עכבר */
+    background-color: #f0f8ff;    
     border: 1px solid #333;
-    /* מסגרת דקה בעת מעבר עכבר */
 }
 
 
-/* שאילתות מדיה להתאמה למכשירים קטנים יותר */
 @media (max-width: 600px) {
     #search-bar-container {
         flex-direction: column;
@@ -780,28 +767,28 @@ footer {
 
 #checkout {
     background-color: #FD3C73;
-    /* צבע רקע ירוק */
+    
     color: white;
-    /* צבע טקסט לבן */
+
     padding: 8px 40px;
-    /* ריווח פנימי */
+    
     border: none;
-    /* ללא גבול */
+
     border-radius: 5px;
-    /* פינות מעוגלות */
+    
     cursor: pointer;
-    /* מצביע עכבר */
+
     font-size: 16px;
-    /* גודל טקסט */
+    
     font-weight: bold;
-    /* עובי טקסט */
+    
     transition: background-color 0.3s ease;
-    /* אפקט מעבר */
+
 }
 
 #checkout:hover {
     background-color: #82072a;
-    /* צבע רקע בעת מעבר עכבר */
+    
 }
 
 ul#liked-products-list {
@@ -842,7 +829,7 @@ a:hover {
 
 #checkout:active {
     background-color: #eeacbe;
-    /* צבע רקע בעת לחיצה */
+
 }
 
 .like-button {
