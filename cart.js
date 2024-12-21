@@ -136,7 +136,6 @@ function checkout() {
             </div>
         `;
 
-        // להסתיר את כפתור "לתשלום"
         document.getElementById('checkout').style.display = 'none';
     });
 }
